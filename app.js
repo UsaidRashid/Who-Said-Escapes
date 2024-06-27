@@ -19,7 +19,11 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter=require("./routes/review.js");
 const userRouter=require("./routes/user.js");
 
-const mongoUrl="mongodb://127.0.0.1:27017/wanderlust";
+
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
+
+const mongoUrl = `mongodb+srv://${username}:${password}@cluster0.psy0ody.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 main().then(()=>{
     console.log("connected to DB");
