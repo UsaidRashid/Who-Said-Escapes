@@ -20,8 +20,8 @@ const reviewRouter=require("./routes/review.js");
 const userRouter=require("./routes/user.js");
 
 
-const username = process.env.MONGODB_USERNAME;
-const password = process.env.MONGODB_PASSWORD;
+const username = process.env.MONGO_USERNAME;
+const password = process.env.MONGO_PASSWORD;
 
 const mongoUrl = `mongodb+srv://${username}:${password}@cluster0.psy0ody.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
